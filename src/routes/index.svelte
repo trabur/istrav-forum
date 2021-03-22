@@ -31,9 +31,9 @@
 		<div class="middle">
 			<div class="logo" on:mouseenter={showMagic} on:mouseleave={hideMagic}>
 				{#if show}
-					<span style="font-size: 2.5em; margin: 0 -0.1em;"><span class="first-a">A</span><span class="second-a">A</span>G<span class="rotate-letter">H</span><span class="space-letter">C</span></span>
+					AAGHC
 				{:else}
-					<span style="font-size: 2.5em; margin: 0 -0.1em;">AAGHC</span>
+					<div class="first-a">A</div><div class="second-a">A</div><div class="third-g">G</div><div class="rotate-letter">H</div><div class="space-letter">C</div>
 				{/if}
 			</div>
 			<h1 class="slogan">Kitting & assembly.</h1>
@@ -69,37 +69,43 @@
 	}
 
 	.logo {
-		margin: -1em 0 0 0;
-		font-size: 3.2em;
+		margin: 0 auto;
+		font-size: 5em;
 		font-weight: 800;
 		text-align: center;
 		font-family: sans-serif;
 		color: #333;
 		cursor: pointer;
+		display: table;
 	}
 
 	.logo .first-a {
-		width: 1em;
+		float: left;
 	}
 
 	.logo .second-a {
-		width: 1em;
 		margin-left: -0.2em;
+		float: left;
+	}
+
+	.logo .third-g {
+		margin-right: 0.1em;
+		float: left;
 	}
 
 	.logo .rotate-letter {
-    position: absolute;
 		transform: rotate(-90deg);
+		float: left;
 	}
 
 	.logo .space-letter {
-		margin-left: 0.7em;
+		float: left;
 	}
 
 	.slogan {
 		font-weight: 600;
 		text-align: center;
-		margin-top: -1em;
+		margin-top: -0.5em;
     font-size: 2.5em;
 		color: #333;
 	}
