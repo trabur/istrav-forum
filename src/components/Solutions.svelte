@@ -7,121 +7,74 @@
   <br class="hide-on-med-and-down" />
   <br />
 
-	<h1 class="title">Our products and services:</h1>
-  <br />
 	<div class="row">
-		<div class="col s0 m1"></div>
-		<div class="col s12 m5">
-			<hr>
-			<br />
-
-			<a href="https://metaheap.io"><h1 class="logo">METAHEAP.IO</h1></a>
-			<div class="power">Powered by <a href="https://istrav.com">ISTRAV</a></div>
-			<br />
-			<div class="desc">This web application is an admin control panel for creating and managing our eCommerce solutions (marketing, storefronts, blogs, fulfillment, and promo) built for website owners.</div>
-			<br />
-			<a href="https://admin.istrav.com" class="waves-effect btn red lighten-2">admin.istrav.com</a>
-			
-			<br />
-			<br />
-			<hr>
-			<br />
-			
-			<a href="https://dimension.click"><h1 class="logo">DIMENSION.CLICK</h1></a>
-			<div class="power">Powered by <a href="https://istrav.com">ISTRAV</a></div>
-			<br />
-			<div class="desc">This server hosts many eCommerce storefronts built for customers to go shopping online.</div>
-			<br />
-			<a href="https://storefront.istrav.com" class="waves-effect btn red lighten-2">storefront.istrav.com</a>
-
-			<br />
-			<br />
-			<hr>
-			<br />
-
-			<a href="https://aaghc.com"><h1 class="logo">AAGHC.COM</h1></a>
-			<div class="power">Powered by <a href="https://istrav.com">ISTRAV</a></div>
-			<br />
-			<div class="desc">This server hosts many fulfillment (kitting and assembly) websites built for storefront owners.</div>
-			<br />
-			<a href="https://fulfillment.istrav.com" class="waves-effect btn red lighten-2">fulfillment.istrav.com</a>
-
-			<br />
-			<br />
-			<hr>
-			<br />
-
-			<a href="https://tyu67.com"><h1 class="logo">TYU67.COM</h1></a>
-			<div class="power">Powered by <a href="https://istrav.com">ISTRAV</a></div>
-			<br />
-			<div class="desc">This server hosts many intro or homepage websites built for website owners and viewers.</div>
-			<br />
-			<a href="https://marketing.istrav.com" class="waves-effect btn red lighten-2">marketing.istrav.com</a>
-
-			<br />
-			<br />
+		<div class="col s0 m2"></div>
+		<div class="col s12 m8">
+			<h1 class="title">We are now assembling bulk orders from 500 to 10,000 kits with 1-5 items.</h1>
 		</div>
-		<div class="col s12 m5">
-			<hr>
-			<br />
-
-			<a href="https://hacktracks.org"><h1 class="logo">HACKTRACKS.ORG</h1></a>
-			<div class="power">Powered by <a href="https://istrav.com">ISTRAV</a></div>
-			<br />
-			<div class="desc">This web interface is a CQRS & "event source" driven REST API for accessing our databases built for headless programmers.</div>
-			<br />
-			<a href="https://api.istrav.com" class="waves-effect btn red lighten-2">api.istrav.com</a>
-
-			<br />
-			<br />
-			<hr>
-			<br />
-
-			<a href="https://farmerless.com"><h1 class="logo">FARMERLESS.COM</h1></a>
-			<div class="power">Powered by <a href="https://istrav.com">ISTRAV</a></div>
-			<br />
-			<div class="desc">This detached application is a backend built for web programmers that enables them to go headless.</div>
-			<br />
-			<a href="https://headless.istrav.com" class="waves-effect btn red lighten-2">headless.istrav.com</a>
-
-			<br />
-			<br />
-			<hr>
-			<br />
-
-			<a href="https://burnfort.com"><h1 class="logo">BURNFORT.COM</h1></a>
-			<div class="power">Powered by <a href="https://istrav.com">ISTRAV</a></div>
-			<br />
-			<div class="desc">This server hosts many website blogs built for authors and readers.</div>
-			<br />
-			<a href="https://blog.istrav.com" class="waves-effect btn red lighten-2">blog.istrav.com</a>
-			
-			<br />
-			<br />
-			<hr>
-			<br />
-
-			<a href="https://printedbasics.com"><h1 class="logo">PRINTEDBASICS.COM</h1></a>
-			<div class="power">Powered by <a href="https://istrav.com">ISTRAV</a></div>
-			<br />
-			<div class="desc">This server hosts many promotional product websites built for customers that want to brand their products.</div>
-			<br />
-			<a href="https://promo.istrav.com" class="waves-effect btn red lighten-2">promo.istrav.com</a>
-		</div>
-		<div class="col s0 m1"></div>
+		<div class="col s0 m2"></div>
 	</div>
+  
+	<br />
+
 	<div class="row">
 		<div class="col s0 m3"></div>
 		<div class="col s12 m6">
 			<hr>
 			<br />
+			
+			<h1 class="logo">STEP 1: <span class="thin">UNBOXING</span></h1>
+			<br />
+			<div class="desc">Items that arive on a pallet need to be taken off the stack and put on a cart (for a waist height working surface). Sometimes an item may need to be assembled such as a water bottle; for example: take cap out of bag, put staw in bottle, screw cap on. Once items are put together and ready then fulfillment may start accepting carts stacked full of items.</div>
+			<br />
+			<a href="/unboxing" class="waves-effect btn red lighten-2">UNBOXING</a>
+			
+			<br />
+			<br />
+			<hr>
+			<br />
+			
+			<h1 class="logo">STEP 2: <span class="thin">FULFILLMENT</span></h1>
+			<br />
+			<div class="desc">When a cart rolls in we grad each kit's item(s) and put it into packaging for shipping. Boxes that show up unassembled will need to be folded and taped together. For a single item kit bulk order such as a book ... it may just go in a padded envelope. For 5 item kits (such as: bottle, visor, card, etc.) they may all go into a sizable box.</div>
+			<br />
+			<a href="/fulfillment" class="waves-effect btn red lighten-2">FULFILLMENT</a>
+			
+			<br />
+			<br />
+			<hr>
+			<br />
 
-			<a href="https://istrav.com"><h1 class="logo">CUSTOM SOFTWARE</h1></a>
-			<div class="power">Powered by <a href="https://istrav.com">ISTRAV</a></div>
+			<h1 class="logo">STEP 3: <span class="thin">PACKAGING</span></h1>
 			<br />
-			<div class="desc">Are the above web solutions not the right fit for you? Let's talk. We can work together to best suit your needs by making a tweak or going 100% full custom.</div>
+			<div class="desc">Some kits may want some kind of packaging material such as crinkle paper so we add that to our boxes in this step. When the kit's package (box or envelope) has everything it needs, everything is double checked, then we tape the box shut or fold and seal the envelope.</div>
 			<br />
-			<a href="https://docs.istrav.com" class="waves-effect btn red lighten-2">docs.istrav.com</a>
+			<a href="/packaging" class="waves-effect btn red lighten-2">PACKAGING</a>
+			
+			<br />
+			<br />
+			<hr>
+			<br />
+
+			<h1 class="logo">STEP 4: <span class="thin">LABELING</span></h1>
+			<br />
+			<div class="desc">Each package is pulled off the stack and a label is applied. Such that if the package were to be opened then the label would not be destroyed. After this we scan each package into our system marking each kit as ready for shipment.</div>
+			<br />
+			<a href="/labeling" class="waves-effect btn red lighten-2">LABELING</a>
+			
+			<br />
+			<br />
+			<hr>
+			<br />
+
+			<h1 class="logo">STEP 5: <span class="thin">SHIPPING</span></h1>
+			<br />
+			<div class="desc"></div>
+			<br />
+			<a href="/shipping" class="waves-effect btn red lighten-2">SHIPPING</a>
+			
+			<br />
+			<br />
 		</div>
 		<div class="col s0 m3"></div>
 	</div>
@@ -143,19 +96,20 @@
     font-weight: 100;
 	}
 
+
 	.logo {
     color: #ccc;
     font-weight: 800;
     margin: 0;
   }
 
+	.logo .thin {
+		font-weight: 100;
+	}
+
   .middle {
 		color: #aaa;
     padding: 1em;
-  }
-
-  .power a {
-    text-decoration: underline;
   }
 
   .desc {
