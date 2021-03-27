@@ -1,41 +1,34 @@
 <script>
-  let navigation = [
-    {
-      "name": "Home",
-      "url": "https://istrav.com"
-    },
-    {
-      "name": "Shop",
-      "url": "https://shop.istrav.com"
-    },
-    {
-      "name": "Community",
-      "url": "https://forum.istrav.com"
-    },
-    {
-      "name": "Blog",
-      "url": "https://blog.istrav.com"
-    },
-    {
-      "name": "Pricing",
-      "url": "https://www.istrav.com/pricing"
-    },
-    {
-      "name": "FAQ",
-      "url": "https://www.istrav.com/faq"
-    },
-    {
-      "name": "Contact",
-      "url": "https://www.istrav.com/contact"
+  import { onMount } from 'svelte';
+
+	export let selected
+  export let appId
+	
+  let items = []
+
+	onMount(async () => {    
+    // get the menus
+    let esNavigation = await scripts.app.menus.getOne(appId, 'main')
+    if (esNavigation.payload.success === true) {
+      items = JSON.parse(esNavigation.payload.data.raw)
+    } else {
+      alert(esNavigation.payload.reason)
     }
-  ]
+    console.log('main menu', items)
+  })
 </script>
 
 <div class="nav">
-  {#each navigation as nav}
-    <a href={nav.url} class="btn-large waves-effect waves-light">
-      {nav.name}
-    </a>
+  {#each items as nav}
+		{#if nav.name === selected}
+			<a href={nav.url} class="btn-large waves-effect waves-light red lighten-2">
+				{nav.name}
+			</a>
+		{:else}
+			<a href={nav.url} class="btn-large waves-effect waves-light">
+				{nav.name}
+			</a>
+		{/if}
   {/each}
 </div>
 
