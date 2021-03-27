@@ -21,7 +21,7 @@
 {#if items.length > 0}
 	<div class="nav">
 		{#each items as nav}
-			{#if nav.name === selected}
+			{#if nav.id === selected}
 				<a href={nav.url} class="btn-large waves-effect waves-light red lighten-2">
 					{nav.name}
 				</a>

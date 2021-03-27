@@ -63,7 +63,7 @@
 
 {#if appId}
 	<Logo />
-	<Nav selected='Community' appId={appId} />
+	<Nav selected='forum' appId={appId} />
 	<div class="dotted">
 		<div style="min-height: 100vh;"></div>
 	</div>
