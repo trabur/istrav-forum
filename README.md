@@ -2,6 +2,11 @@ AAGHC.COM
 ========
 
 ```bash
+# development
+export PORT=5000; npm run dev
+```
+
+```bash
 npm install
 npm run build
 npm start
