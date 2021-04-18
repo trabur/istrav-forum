@@ -11,7 +11,7 @@
 </script>
 
 {#if loading}
-<!-- do nothing -->
+  <!-- do nothing -->
 {:else}
   <slot></slot>
 {/if}
@@ -22,6 +22,10 @@
   import { onMount, onDestroy } from 'svelte';
   import axios from 'axios'
 
+  export let apiUri
+  export let ioUri
+  export let headlessUri
+  
   let loading = true
 
   onMount(() => {
@@ -38,7 +42,8 @@
       console.log('localhost settings:', appDomain, backend, headless)
     } else {
       window.appDomain = window.location.host
-      backend = apiUri || 'https://hacktracks.org'
+      backend = apiUri || 'https://api.hacktracks.org'
+      io = ioUri || 'https://io.hacktracks.org'
       headless = headlessUri || 'https://farmerless.com'
       console.log('production settings:', appDomain, backend, headless)
     }
