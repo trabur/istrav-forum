@@ -1,30 +1,23 @@
 <script>
   import { onMount } from "svelte";
-	import * as animateScroll from "svelte-scrollto"
+  
+  import { istrav, scripts } from '../../farmerless/api'
 
-	import Solutions from '../components/Solutions.svelte'
-	import Nav from '../components/Nav.svelte'
-	import Logo from '../components/Logo.svelte'
+  import Generic1 from '../../farmerless/components/wireframes/Generic1.svelte'
+	import MainFooter from '../../farmerless/components/blocks/MainFooter.svelte'
+	import Navigation from '../../farmerless/components/blocks/Navigation.svelte'
+	import Logo from '../../farmerless/components/blocks/Logo.svelte'
+	import Slogan from '../../farmerless/components/blocks/Slogan.svelte'
 
-  let esApp
-  let appId
+  let app
   let domainId
   let state = 'production'
-  let uploads
-  let token = null
-  let rawApp = {
-    name: '',
-    short: ''
-  }
 
 	onMount(async () => {
-    // user
-		token = localStorage.getItem('token')
-
     domainId = window.location.host
 
     // pick an app to show for local development
-    if (domainId.includes('localhost:3000')) {
+    if (domainId.includes('localhost:5000')) {
       domainId = 'istrav.com'
     }
     // set appId from domain 
@@ -33,10 +26,7 @@
       let endpoint = domainId.split('.')[0]
       let esEndpoint = await scripts.tenant.apps.getEndpoint(null, endpoint)
       if (esEndpoint.payload.success === true) {
-        esApp = esEndpoint.payload.data
-        appId = esEndpoint.payload.data.id
-        uploads = esEndpoint.payload.data.uploads
-        rawApp = JSON.parse(esEndpoint.payload.data.raw)
+        app = esEndpoint.payload.data
         domainId = esEndpoint.payload.data.domain // do this so images load
       } else {
         alert(esEndpoint.payload.reason)
@@ -46,10 +36,7 @@
       domainId = domainId.split('.').slice(-2).join('.')
       let esOne = await scripts.tenant.apps.getOne(null, domainId, state)
       if (esOne.payload.success === true) {
-        esApp = esOne.payload.data
-        appId = esOne.payload.data.id
-        uploads = esOne.payload.data.uploads
-        rawApp = JSON.parse(esOne.payload.data.raw)
+        app = esOne.payload.data
       } else {
         alert(esOne.payload.reason)
       }
@@ -58,23 +45,36 @@
 </script>
 
 <svelte:head>
-	<title>AAGHC: Community messaging and bulletin board.</title>
+  {#if app}
+	  <title>Message Bulltin Board - {app.labelName}</title>
+  {/if}
 </svelte:head>
 
-{#if appId}
-	<Logo domainId={domainId} rawApp={rawApp} />
-	<Nav selected='forum' appId={appId} />
-	<div class="dotted">
-		<div style="min-height: 100vh;"></div>
-	</div>
+{#if app}
+  <Generic1 showWiring={false}>
+    <section slot="logo" class="slot">
+      <Logo {app} fontSize='' height='' />
+    </section>
+    <section slot="slogan" class="slot">
+      <Slogan {app} fontSize='1em' />
+    </section>
+    <section slot="controls" class="slot">
+      CONTROLS
+    </section>
+    <section slot="navigation" class="slot">
+      <Navigation {app} page={{}} selected='forum' menuId='main' />
+    </section>
+    <section slot="article" class="slot">
+      hello messages :)
+    </section>
+    <section slot="main" class="slot">
+      
+    </section>
+    <section slot="footer" class="slot">
+      <MainFooter {app} page={{}} selected='forum' menuId='marketing' />
+    </section>
+  </Generic1>
 {/if}
 
-
 <style>
-	.dotted {
-		background-image: radial-gradient(#ddd 20%, transparent 20%), radial-gradient(#ddd 20%, transparent 20%);
-    background-color: #eee;
-    background-position: 0 0, 50px 50px;
-    background-size: 100px 100px;
-	}
 </style>
